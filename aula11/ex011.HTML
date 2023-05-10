@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfândega</title> 
+    <style>
+        body{
+            background-color: rgb(79, 79, 196);
+            font: normal 20px times;
+            color: white;
+        }
+       
+    </style>  
+</head>
+<body>
+    <h1>Setor de Triagem</h1>
+    Escreva aqui seu país de origem: <input type="text" name="txtn1" id="txtn1">
+    <input type="button" value="pesquisar" onclick="calcular()">
+    <div id = 'res'></div>
+
+<script>
+    function calcular() {
+        var nac = window.document.getElementById('txtn1')
+        var res = window.document.querySelector('div#res')
+        var pais = String(nac.value)
+        res.innerHTML = `<p>Seu país de orígem é ${pais}</p>`
+        if (pais == 'brasil') {
+            res.innerHTML += '<p>você é <STRONG>brasileiro</STRONG></p>'
+          } else {
+            res.innerHTML += '<p>você é <STRONG>estrangeiro</STRONG></p>'
+        }
+       
+    }
+</script>
+</body>
+</html>
